@@ -1,0 +1,32 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.label {
+  text-align: left;
+}
+
+.field {
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.btn {
+  background-color: #ff7043; 
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.error {
+  color: red;
+  font-size: 24px;
+}

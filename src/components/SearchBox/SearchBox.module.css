@@ -1,0 +1,14 @@
+.searchbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  text-align: left;
+}
+
+.input {
+  padding: 5px;
+  border-radius: 10px;
+  width: 260px;
+}

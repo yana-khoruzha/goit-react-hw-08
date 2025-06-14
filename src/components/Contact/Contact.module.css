@@ -1,0 +1,32 @@
+.contactCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff3e0; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.contactItem {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.contactIcon {
+  margin-right: 8px;
+}
+
+.deleteBtn {
+  background-color: #ff7043; 
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.deleteButton:hover {
+  background-color: #e64a19; 
+}
