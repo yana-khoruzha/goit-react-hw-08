@@ -1,32 +1,26 @@
-import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
-
-axios.defaults.baseURL = 'https://connections-api.goit.global';
+import { contactsAPI } from './api';
 
 export const fetchContacts = createAsyncThunk(
   'contacts/fetchAll',
   async (_, thunkAPI) => {
     try {
-      const res = await axios.get('/contacts');
-      return res.data;
+      const response = await contactsAPI.get('/contacts');
+      return response.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(
-        error.response.data.message || error.message
-      );
+      return thunkAPI.rejectWithValue(error.response?.data?.message || error.message);
     }
   }
 );
 
 export const addContact = createAsyncThunk(
   'contacts/addContact',
-  async (contact, thunkAPI) => {
+  async (contactData, thunkAPI) => {
     try {
-      const res = await axios.post('/contacts', contact);
-      return res.data;
+      const response = await contactsAPI.post('/contacts', contactData);
+      return response.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(
-        error.response.data.message || error.message
-      );
+      return thunkAPI.rejectWithValue(error.response?.data?.message || error.message);
     }
   }
 );
@@ -35,12 +29,11 @@ export const deleteContact = createAsyncThunk(
   'contacts/deleteContact',
   async (id, thunkAPI) => {
     try {
-      await axios.delete(`/contacts/${id}`);
+      await contactsAPI.delete(`/contacts/${id}`);
       return id;
     } catch (error) {
-      return thunkAPI.rejectWithValue(
-        error.response.data.message || error.message
-      );
+      return thunkAPI.rejectWithValue(error.response?.data?.message || error.message);
     }
   }
 );
+
