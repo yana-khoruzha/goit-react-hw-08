@@ -12,7 +12,6 @@ import RestrictedRoute from './routes/RestrictedRoute';
 
 import { refreshUser } from './redux/auth/operations';
 import { selectIsRefreshing } from './redux/auth/selectors';
-import './App.css';
 
 export default function App() {
   const dispatch = useDispatch();

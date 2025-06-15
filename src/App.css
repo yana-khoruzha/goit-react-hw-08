@@ -43,16 +43,3 @@
 .read-the-docs {
   color: #888;
 }
-
-.appContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  width: 100%;
-  max-width: 500px;
-  padding: 32px;
-  margin: 60px auto;
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-}

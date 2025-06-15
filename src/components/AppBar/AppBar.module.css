@@ -1,6 +1,5 @@
 .header {
-  width: 100vw;
-  max-width: none;
+  width: 100%;
   margin: 0;
   padding: 20px 40px;
   background-color: #fff;
@@ -14,6 +13,13 @@
   z-index: 1000;
   box-sizing: border-box;
 
+}
+
+.right {
+  margin-left: auto; 
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .nav {
